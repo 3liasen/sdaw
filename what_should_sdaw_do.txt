@@ -1,1 +1,49 @@
+Vi skal have bygget et Wordpress-plugin, der udvider funktionaliteterne i Wordpress Download Manager Pro (herefter WPDM).
+
+Målet er at skabe et website, der opbevarer dokumenter for en række forskellige aktører. Du skal forestille dig en byggeplads. Her er der en hoveentreprenør, der har en række underleverandører. Alle skal de kunne dokumentere, at de har adgang til dokumenter (datablade), der dækker en række forskellige produkter, hvori der er en eller anden form for kemi.
+
+Vi skal lave sitet, så hvis virksomhed A opretter sig, får de deres eget lille dokumentunivers, hvor de kan uploade dokumenter. Til hvert dokument skal der genereres en unik QR-kode. Den skal kunne ses i backend under hvert dokument og koden skal kunne kanaliseres ud til en PDF-produktion hvor virksomhed A efterfølgende kan printe den.
+
+Vi skal altså have gang i yderligere to funtionaliteter: Producér QR-kode og producér PDF (måske sidstnævnte er inkluderet i WPDM).
+
+Hver virksomhed har en udnævnet dokumentadministrator. Denne administrator skal KUN kunne se de dokumenter, der vedrører deres virksomhed. 
+
+====
+
+Mht. datablade skal der oprettes en separat dokument-bank, hvor der ligger datablade. Den skal kunne tilgås af dokumentopretteren via et produkts stregkode EAN*. Felterne i den database-table skal indeholde:
+EAN
+Producent
+Produktnavn
+
+Opretteren skal kunne scanne stregkoden med en stregkodelæser på kontoret og hente data fra dokument-banken.
+
+====
+
+
+Yderligere plugins installeret på sitet:
+Elementor
+Elementor Pro
+JetEngine 3.7.5
+Gravity Forms
+Dynamic Content (OOO) for Elementor
+
+
+
+Instruktioner: HVER GANG der laves en ændring, om det så bare er i en enkelt fil, skal 
+hovedfilen i plugin'et versionopdateres. Vi starter med v1.0.0 og bevæger os opad.  Efter 1.0.99 bliver det til 1.1.0
+Du har frie hænder til at oprette så mange filer du finder nødvendigt.
+
+Alle datoer: dd-mm-yyyy
+Alle tidspunkter: tt:mm-yyyy
+
+Domænet vi kommer til at arbejde på hedder https://safetydocsatwork.dk
+
+Dokumentation for Wordpress Download Manager Pro:
+https://www.wpdownloadmanager.com/docs/
+
+Vi kører PHP 8.4
+
+===
+
+VIGTIGT! Der skal laves et logging-system til fejlmeddelelser. Det skal ligge i backend, så det er let at komme til.
 
